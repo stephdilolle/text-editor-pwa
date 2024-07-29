@@ -14,17 +14,17 @@ module.exports = () => {
       install: './src/js/install.js'
     },
     output: {
-      filename: 'jate.bundle.js',
+      filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/js/index.html',
+        template: './index.html',
         filename: 'index.html',
         chunks: ['main'],
       }),
       new HtmlWebpackPlugin({
-        template: './src/js/install.html',
+        template: './install.html',
         filename: 'install.html',
         chunks: ['install'],
       }),
@@ -41,7 +41,7 @@ module.exports = () => {
         theme_color: '#2196f3',
         icons: [
           {
-            src: path.resolve('src/js/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('js', 'icons'),
           },
