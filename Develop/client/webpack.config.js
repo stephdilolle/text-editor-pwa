@@ -23,11 +23,6 @@ module.exports = () => {
         filename: 'index.html',
         chunks: ['main'],
       }),
-      new HtmlWebpackPlugin({
-        template: './install.html',
-        filename: 'install.html',
-        chunks: ['install'],
-      }),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'service-worker.js',
